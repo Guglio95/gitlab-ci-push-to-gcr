@@ -31,7 +31,7 @@ I recommend setting `GOOGLE_CLOUD_ACCOUNT` via protected variables **Settings ->
 ```bash
 base64 -w0 /key.json > /key-base64.json
 ```
-6. Create a Gitlab CI secret named `GOOGLE_CLOUD_ACCOUNT` with the content; since the key is base64 encoded you can flag the *mask* feature.
+6. Create a Gitlab CI secret named `GOOGLE_CLOUD_ACCOUNT` with the content, **select `file` as type**, **flag the `mask` field**.
 
 #### Notes
 
