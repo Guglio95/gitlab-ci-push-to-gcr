@@ -26,7 +26,12 @@ I recommend setting `GOOGLE_CLOUD_ACCOUNT` via protected variables **Settings ->
 1. Go to your Google Cloud account
 2. Pick a project
 3. Create service account with [Storage admin](https://cloud.google.com/container-registry/docs/access-control) role (**IAM & Admin -> Service accounts -> Create service account**)
-4. Copy the json key and enter it to gitlab
+4. Create and download the json key
+5. Base64 encode it:
+```bash
+base64 -w0 /key.json > /key-base64.json
+```
+6. Create a Gitlab CI secret named `GOOGLE_CLOUD_ACCOUNT` with the content; since the key is base64 encoded you can flag the *mask* feature.
 
 #### Notes
 
