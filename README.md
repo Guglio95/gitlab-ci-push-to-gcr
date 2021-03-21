@@ -8,13 +8,11 @@ This repository is to demonstrate workflow:
 
 ## Environment variables:
   - `GOOGLE_CLOUD_ACCOUNT` - google cloud service account credentials (see below how to get it)
-  - `GITLAB_IMAGE` - where we push go Gitlab Registry
   - `GCR_IMAGE` - where we push to Google Cloud Registry
 
-Images variables can be set in Gitlab's settings or in your `.gitlab-ci.yml` file:
+Image variable can be set in Gitlab's settings or in your `.gitlab-ci.yml` file:
 ```yaml
 variables:
-  GITLAB_IMAGE: registry.gitlab.com/author-name/my-project
   GCR_IMAGE: eu.gcr.io/my-project/image-name
 ```
 
